@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["luwei.here@gmail.com"]
   spec.description   = %q{Return release download stats for a given github project owner/project}
   spec.summary       = %q{Return release download stats for a given github project owner/project}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/weilu/github-release-stats"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
