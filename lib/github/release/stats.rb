@@ -14,7 +14,7 @@ module Github
         end
 
         stats = prod_releases.map do |r|
-          [r["tag_name"], r["assets"].first["download_count"]]
+          [r["tag_name"], r["assets"].first["download_count"], r]
         end
 
         stats
