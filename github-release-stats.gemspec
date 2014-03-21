@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Github::Release::Stats::VERSION
   spec.authors       = ["Wei Lu"]
   spec.email         = ["luwei.here@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Return release download stats for a given github project owner/project}
+  spec.summary       = %q{Return release download stats for a given github project owner/project}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_dependency "thor"
 end

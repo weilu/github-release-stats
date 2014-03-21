@@ -1,4 +1,5 @@
-require "github/release/stats/version"
+require_relative "stats/version"
+require_relative "stats/cli"
 
 module Github
   module Release
