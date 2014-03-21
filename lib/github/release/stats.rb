@@ -1,10 +1,24 @@
 require_relative "stats/version"
-require_relative "stats/cli"
+require "open-uri"
+require "json"
 
 module Github
   module Release
     module Stats
-      # Your code goes here...
+      def self.downloads(repo)
+        url = "https://api.github.com/repos/#{repo}/releases"
+        releases = JSON.parse open(url).read
+
+        prod_releases =  releases.select do |r|
+          !r["draft"] && !r["prerelease"] && r["assets"] && !r["assets"].empty?
+        end
+
+        stats = prod_releases.map do |r|
+          [r["tag_name"], r["assets"].first["download_count"]]
+        end
+
+        stats
+      end
     end
   end
 end
